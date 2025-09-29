@@ -38,7 +38,18 @@ int findMinimum(int *array, int start, int stop)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void selectionSortIntegers(int *array, unsigned int size, int print)
 {
-    // todo: implement selection sort
+    for (unsigned int i = 0; i < size - 1; i++) // for each position in the array
+    {
+        int minIndex = findMinimum(array, i, size); // find the index of the minimum value
+        if (minIndex != i) // if it's not already in the right place
+        {
+            swap(&array[i], &array[minIndex]); // swap it into place
+        }
+        if (print) // if print is true (non-zero)
+        {
+            printArray(array, size); // print the array after each iteration
+        }
+    }
 }
 
 /***  Code for Insertion Sort ***/
