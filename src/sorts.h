@@ -67,8 +67,25 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void insertionSortIntegers(int *array, unsigned int size, int print)
 {
-    // TODO: Implement insertion sort
- 
+    for (unsigned int i = 1; i < size; i++) // for each element in the array, starting at index 1
+    {
+        int key = array[i]; // the value to be inserted into the sorted portion
+        int j = i - 1;     // the last index of the sorted portion
+
+        // Move elements of array[0..i-1], that are greater than key,
+        // to one position ahead of their current position
+        while (j >= 0 && array[j] > key)
+        {
+            array[j + 1] = array[j]; // shift element to the right
+            j--;                     // move to the previous element
+        }
+        array[j + 1] = key; // insert the key at its correct position
+
+        if (print) // if print is true (non-zero)
+        {
+            printArray(array, size); // print the array after each iteration
+        }
+    }
 
 }
 
