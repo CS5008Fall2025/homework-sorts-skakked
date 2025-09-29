@@ -1,3 +1,8 @@
+/**
+ * Name: Siddharth Kakked
+ * Date: 2024-09-15
+ * Semester: Fall 2025
+ */
 #ifndef SORTS_H
 #define SORTS_H
 
