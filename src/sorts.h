@@ -104,8 +104,26 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
 //           be modified to store a sorted array of size.
 void bubbleSortIntegers(int *array, unsigned int size, int print)
 {
-    // code generated from lab
-
+    for (unsigned int i = 0; i < size - 1; i++) // for each position in the array
+    {
+        int swapped = 0; // flag to check if any swapping occurred
+        for (unsigned int j = 0; j < size - i - 1; j++) // last i elements are already sorted
+        {
+            if (array[j] > array[j + 1]) // if the current element is greater than the next
+            {
+                swap(&array[j], &array[j + 1]); // swap them
+                swapped = 1; // set the flag to indicate a swap occurred
+            }
+        }
+        if (print) // if print is true (non-zero)
+        {
+            printArray(array, size); // print the array after each iteration
+        }
+        if (swapped == 0) // if no two elements were swapped in the inner loop, then break
+        {
+            break;
+        }
+    }
 }
 
 // ** You will work on merge sort during the lab on Module 06 ** //
