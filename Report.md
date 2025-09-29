@@ -9,7 +9,7 @@ You are free to write a script to run the program and build your table (then cop
 
 ### Table [^note]
 | N | Bubble | Selection | Insertion | Merge | Quick |
-| :-- | :--: | :--: | :--: | :--: | :--: |
+| 1 | :--: | :--: | :--: | :--: | :--: |
 
 
 
