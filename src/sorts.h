@@ -52,7 +52,7 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
         }
         if (print) // if print is true (non-zero)
         {
-            printArray(array, size); // print the array after each iteration
+            printIntArray(array, size); // print the array after each iteration
         }
     }
 }
@@ -88,7 +88,7 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
 
         if (print) // if print is true (non-zero)
         {
-            printArray(array, size); // print the array after each iteration
+            printIntArray(array, size); // print the array after each iteration
         }
     }
 
@@ -122,7 +122,7 @@ void bubbleSortIntegers(int *array, unsigned int size, int print)
         }
         if (print) // if print is true (non-zero)
         {
-            printArray(array, size); // print the array after each iteration
+            printIntArray(array, size); // print the array after each iteration
         }
         if (swapped == 0) // if no two elements were swapped in the inner loop, then break
         {
