@@ -55,24 +55,25 @@ Build another table that presents the best, worst, and average case for Bubble, 
 #### 3.2 Worst Case
 Provide example of arrays that generate _worst_ case for Bubble, Selection, Insertion, Merge Sorts
 
-| Algorithm | Worst Case Complexity | Example Array | Explanation |
-|-----------|---------------------|---------------|-------------|
-| Bubble Sort | O(n²) | `[5, 4, 3, 2, 1]` | Reverse sorted array requires maximum swaps. Each pass only moves the largest unsorted element one position, requiring n(n-1)/2 comparisons and swaps. |
-| Selection Sort | O(n²) | Any array (e.g., `[1, 2, 3, 4, 5]` or `[5, 4, 3, 2, 1]`) | Selection sort always performs O(n²) comparisons regardless of input ordering because it must scan the entire unsorted portion to find the minimum element. |
-| Insertion Sort | O(n²) | `[5, 4, 3, 2, 1]` | Reverse sorted array forces each element to be compared and shifted all the way to the beginning. Element at position i requires i comparisons and shifts, totaling n(n-1)/2 operations. |
-| Merge Sort | O(n log n) | Any array (e.g., `[5, 4, 3, 2, 1]` or `[1, 2, 3, 4, 5]`) | Merge sort consistently divides the array in half and merges regardless of initial ordering. Worst case equals best and average case. |
+| Algorithm | Worst Case Complexity | Example Array |
+|-----------|---------------------|---------------|
+| Bubble Sort | O(n²) | `[5, 4, 3, 2, 1]` |
+| Selection Sort | O(n²) | Any array |
+| Insertion Sort | O(n²) | `[5, 4, 3, 2, 1]` |
+| Merge Sort | O(n log n) | Any array |
 
 
 
 #### 3.3 Best Case
 Provide example of arrays that generate _best_ case for Bubble, Selection, Insertion, Merge Sorts 
 
-| Algorithm | Best Case Complexity | Example Array | Explanation |
-|-----------|---------------------|---------------|-------------|
-| Bubble Sort | O(n) | `[1, 2, 3, 4, 5]` | Already sorted array allows optimized version with swap flag to detect no swaps occurred in first pass and exit early after only n comparisons. |
-| Selection Sort | O(n²) | Any array (e.g., `[1, 2, 3, 4, 5]`) | Even with a sorted array, selection sort must scan through all remaining elements to verify the minimum, performing the same number of comparisons as worst case. |
-| Insertion Sort | O(n) | `[1, 2, 3, 4, 5]` | Already sorted array means each element only requires one comparison to determine it's in correct position. No shifts needed, resulting in exactly n-1 comparisons. |
-| Merge Sort | O(n log n) | Any array (e.g., `[1, 2, 3, 4, 5]`) | Merge sort's divide-and-conquer approach is deterministic—always splits array into halves and merges them regardless of initial ordering. Best case equals worst case. |
+| Algorithm | Best Case Complexity | Example Array |
+|-----------|---------------------|---------------|
+| Bubble Sort | O(n) | `[1, 2, 3, 4, 5]` |
+| Selection Sort | O(n²) | Any array |
+| Insertion Sort | O(n) | `[1, 2, 3, 4, 5]` |
+| Merge Sort | O(n log n) | Any array |
+
 
 #### 3.4 Memory Considerations
 Order the various sorts based on which take up the most memory when sorting to the least memory. You may have to research this, and include the mathematical notation. 
