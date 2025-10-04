@@ -158,12 +158,61 @@ void merge(int arr[], int temp[], int l, int m, int r)
 //          	This helps temporarily store the sorted subarray.
 //          (3) 'l' and 'r' are integers, which are the first index and the last index of 'arr' respectively.
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
-void merge_sort(int arr[], int temp[], int l, int r)
+void merge_sort(int arr[], int temp[], int l, int r, int m)
 {
-   
+    int i, j, k;
+    
+    if (arr == NULL || temp == NULL)
+    {
+        exit(1);
+    }
+
+    if (l > m || m + 1 > r)
+        return;
+
+    // Copy data to temp array
+    for (i = l; i <= r; i++)
+    {
+        temp[i] = arr[i];
+    }
+
+    i = l;       // Initial index of first subarray
+    j = m + 1;   // Initial index of second subarray
+    k = l;       // Initial index of merged array
+
+    // Merge the two subarrays back into arr[l..r]
+    while (i <= m && j <= r)
+    {
+        if (temp[i] <= temp[j])
+        {
+            arr[k] = temp[i];
+            i++;
+        }
+        else
+        {
+            arr[k] = temp[j];
+            j++;
+        }
+        k++;
+    }
+
+    // Copy remaining elements of left subarray, if any
+    while (i <= m)
+    {
+        arr[k] = temp[i];
+        i++;
+        k++;
+    }
+
+    // Copy remaining elements of right subarray, if any
+    while (j <= r)
+    {
+        arr[k] = temp[j];
+        j++;
+        k++;
+    }
 }
 
-// lab build, merge sort
 
 void mergeSortIntegers(int *array, unsigned int size, int print)
 { // print is ignored for this one
