@@ -45,11 +45,11 @@ Build another table that presents the best, worst, and average case for Bubble, 
 
 | Algorithm | Best Case | Average Case | Worst Case |
 |-----------|-----------|--------------|------------|
-| Bubble Sort | O(n) | O(n²) | O(n²) |
-| Selection Sort | O(n²) | O(n²) | O(n²) |
-| Insertion Sort | O(n) | O(n²) | O(n²) |
-| Merge Sort | O(n log n) | O(n log n) | O(n log n) |
-| Quick Sort | O(n log n) | O(n log n) | O(n²) |
+| Bubble Sort [1] | O(n) | O(n²) | O(n²) |
+| Selection Sort[1] | O(n²) | O(n²) | O(n²) |
+| Insertion Sort [1] | O(n) | O(n²) | O(n²) |
+| Merge Sort [1] | O(n log n) | O(n log n) | O(n log n) |
+| Quick Sort [1] | O(n log n) | O(n log n) | O(n²) |
 
 
 #### 3.2 Worst Case
@@ -57,10 +57,10 @@ Provide example of arrays that generate _worst_ case for Bubble, Selection, Inse
 
 | Algorithm | Worst Case Complexity | Example Array |
 |-----------|---------------------|---------------|
-| Bubble Sort | O(n²) | `[5, 4, 3, 2, 1]` |
-| Selection Sort | O(n²) | Any array |
-| Insertion Sort | O(n²) | `[5, 4, 3, 2, 1]` |
-| Merge Sort | O(n log n) | Any array |
+| Bubble Sort [2] | O(n²) | `[5, 4, 3, 2, 1]` |
+| Selection Sort [2] | O(n²) | Any array |
+| Insertion Sort [2] | O(n²) | `[5, 4, 3, 2, 1]` |
+| Merge Sort [2] | O(n log n) | Any array |
 
 
 
@@ -69,16 +69,16 @@ Provide example of arrays that generate _best_ case for Bubble, Selection, Inser
 
 | Algorithm | Best Case Complexity | Example Array |
 |-----------|---------------------|---------------|
-| Bubble Sort | O(n) | `[1, 2, 3, 4, 5]` |
-| Selection Sort | O(n²) | Any array |
-| Insertion Sort | O(n) | `[1, 2, 3, 4, 5]` |
-| Merge Sort | O(n log n) | Any array |
+| Bubble Sort [2] | O(n) | `[1, 2, 3, 4, 5]` |
+| Selection Sort [2] | O(n²) | Any array |
+| Insertion Sort [2] | O(n) | `[1, 2, 3, 4, 5]` |
+| Merge Sort [2] | O(n log n) | Any array |
 
 
 #### 3.4 Memory Considerations
 Order the various sorts based on which take up the most memory when sorting to the least memory. You may have to research this, and include the mathematical notation. 
 
-> Memory Usage Ranking (Most to Least): Merge Sort O(n), Quick Sort o(log n), Bubble Sort O(1), Selection Sort O(1), Insertion sort O(1)
+> Memory Usage Ranking (Most to Least): Merge Sort O(n), Quick Sort o(log n), Bubble Sort O(1), Selection Sort O(1), Insertion sort O(1) [4]
 
 
 ### 4. Growth of Functions
@@ -123,12 +123,12 @@ Pair the following terms with the correct function in the table.
 
 ### 6. Stable vs Unstable
 Look up stability as it refers to sorting. In your own words, describe one sort that is stable and one sort that isn't stable  
-> A stable sorting algorithm is a sorting method that preserves the relative order of elements that are considered equal according to the sorting criteria
-> Merge sort is stable because the relative order is maintained because it always sorts from the left subarray first preserving order. Quick sort is unstable because it doesn't preserve the original order because swaps elements around without tracking its order.
+> A stable sorting algorithm is a sorting method that preserves the relative order of elements that are considered equal according to the sorting criteria. [5]
+> Merge sort is stable because the relative order is maintained because it always sorts from the left subarray first preserving order. Quick sort is unstable because it doesn't preserve the original order because swaps elements around without tracking its order. [5]
 
 ### 6.2 When stability is needed?
 Explain in your own words a case in which you will want a stable algorithm over an unstable. Include an example. 
-> We need stability in cases where we are sorting by multiple criteria or when equal elements have additional information that shouldn't be lost. For example sorting for a shopping site, sorting products by category and then by price within each category.
+> We need stability in cases where we are sorting by multiple criteria or when equal elements have additional information that shouldn't be lost. For example sorting for a shopping site, sorting products by category and then by price within each category. [5]
 
 
 ### 7. Gold Thief
@@ -137,15 +137,15 @@ You are planning a heist to steal a rare coin that weighs 1.0001 ounces. The pro
 
 #### 7.1 Algorithm
 Describe an algorithm that will help you find the coin. We encourage you to use pseudo-code, but not required.
-> We can use divide and conquer. First lets divide i.e., Split the n number of coins into A, B and C. Then conquer i.e., determine which of the 3 pile has the rare coin (via weighing). A against B of they balance the heavy coin is in C, if not, its in the heavier of the A or B. Discard the other two piles and repeat the sameway split on the suspect pile until a single coin remains. This is effectively a ternary search, requiring about $\\log_{3} n$ weighings (approx. 5 for 250)
+> We can use divide and conquer. First lets divide i.e., Split the n number of coins into A, B and C. Then conquer i.e., determine which of the 3 pile has the rare coin (via weighing). A against B of they balance the heavy coin is in C, if not, its in the heavier of the A or B. Discard the other two piles and repeat the sameway split on the suspect pile until a single coin remains. This is effectively a ternary search, requiring about $\\log_{3} n$ weighings (approx. 5 for 250). [4,5]
 
 #### 7.2 Time Complexity
 What is the average time complexity of your algorithm? 
 > Each weighing discards roughly $ \tfrac{2}{3} $ of the coins, so the number of weighings grows like:
-> Average / expected: $ \Theta(\log_{3} n) $ (about $ \log_{3} n $ weighings)
+> Average / expected: $ \Theta(\log_{3} n) $ (about $ \log_{3} n $ weighings) [4.5]
 > Worst case: $ \lceil \log_{3} n \rceil $ weighings due to uneven splits
 > For $ n = 250 $: $ \log_{3} 250 \approx 5.03 $ which is about 5 on average and worst case would be $ \le 6 $ weighings
-> Average time complexity  would be $ \Theta(\log_{3} n) $
+> Average time complexity  would be $ \Theta(\log_{3} n) $ [4,5]
 
 ## Technical Interview Practice Questions
 
@@ -154,7 +154,7 @@ For both these questions, are you are free to use what you did as the last secti
 1. Select one technical interview question (this module or previous) from the [technical interview list](https://github.com/CS5008-khoury/Resources/blob/main/TechInterviewQuestions.md) below and answer it in a few sentences. You can use any resource you like to answer the question.
 
 > When would we want an algorithm with a higher time complexity than another faster algorithm?
-> Answer: When you have nearly sorted data because insertion Sort is O(n²) worst case but O(n) for nearly sorted data. On partially sorted arrays, it can beat Quick Sort or Merge Sort despite worse theoretical complexity. A second reason a programmer might chose an algorithm with a higher time complexity is when you have a small dataset like for small n (n < 50), simpler O(n²) algorithms like insertion sort can outperform O(n log n) algorithms due to fewer operations.
+> Answer: When you have nearly sorted data because insertion Sort is O(n²) worst case but O(n) for nearly sorted data. On partially sorted arrays, it can beat Quick Sort or Merge Sort despite worse theoretical complexity. A second reason a programmer might chose an algorithm with a higher time complexity is when you have a small dataset like for small n (n < 50), simpler O(n²) algorithms like insertion sort can outperform O(n log n) algorithms due to fewer operations. [5]
 
 
 2. Select one coding question (this module or previous) from the [coding practice repository](https://github.com/CS5008-khoury/Resources/blob/main/LeetCodePractice.md) and include a c file with that code with your submission. Make sure to add comments on what you learned, and if you compared your solution with others. 
@@ -165,7 +165,7 @@ For both these questions, are you are free to use what you did as the last secti
 ## Deeper Thinking
 Sorting algorithms are still being studied today. They often include a statistical analysis of data before sorting. This next question will require some research, as it isn't included in class content. When you call `sort()` or `sorted()` in Python 3.6+, what sort is it using? 
 
-> Python 3.6 through 3.10 uses Timsort, a hybrid sorting algorithm that combines insertion sort and merge sort. Starting with Python 3.11, Python switched to Powersort.  
+> Python 3.6 through 3.10 uses Timsort, a hybrid sorting algorithm that combines insertion sort and merge sort. [6] Starting with Python 3.11, Python switched to Powersort.[7]  
 
 #### Visualize
 > Find a graphic / visualization (can be a youtube video) that demonstrates the sort in action.
@@ -173,17 +173,22 @@ Sorting algorithms are still being studied today. They often include a statistic
 
 #### Big O
 Give the worst and best case time-complexity, and examples that would generate them. 
-> Best Case: Best-case time complexity is O(n), which occurs when the input array is already sorted. E.g. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+> Best Case: Best-case time complexity is O(n), which occurs when the input array is already sorted. E.g. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] [6]
 
-> Worst Case: The worst-case time complexity is O(n log n). E.g. Random data with no eixsting order, a random array of integers 1 to 100.
+> Worst Case: The worst-case time complexity is O(n log n). E.g. Random data with no eixsting order, a random array of integers 1 to 100. [6]
 
 <hr>
 
 ## References
 Add your references here. A good reference includes an inline citation, such as [1] , and then down in your references section, you include the full details of the reference. Use [ACM Reference format].
 
-1. Reference info, date, etc.
-2. ...
+1. Bhargava, A. 2016. Grokking Algorithms: An Illustrated Guide for Programmers and Other Curious People. Manning Publications, Shelter Island, NY. ISBN 9781617292231.
+2. Rowell, E. n.d. Big-O Algorithm Complexity Cheat Sheet (Know Thy Complexities!). BigOCheatSheet.com. Retrieved October 4, 2025 from https://www.bigocheatsheet.com/
+3. GeeksforGeeks. 2025. Analysis of Algorithms. Big-O analysis. (August 27, 2025) Retrieved September 7, 2025 from https://www.geeksforgeeks.org/analysis-algorithms-big-o-analysis/
+4. Cormen, T. H., Leiserson, C. E., Rivest, R. L., and Stein, C. 2022. Introduction to Algorithms (4th ed.). MIT Press, Cambridge, MA. ISBN 978-0262046305.
+5. Sedgewick, R., and Wayne, K. Algorithms, 4th Edition (Companion Site). Princeton University. Accessed Oct. 4, 2025.
+6. GeeksforGeeks. 2025. Tim Sort in Python. Retrieved Oct. 4, 2025 from https://www.geeksforgeeks.org/dsa/tim-sort-in-python/
+7. James, M. 2022. Python Now Uses Powersort. i-Programmer, Dec. 21, 2022. Retrieved Oct. 4, 2025 from https://www.i-programmer.info/news/216-python/15954-python-now-uses-powersort.html
 
 
 
