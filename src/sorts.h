@@ -131,8 +131,8 @@ void bubbleSortIntegers(int *array, unsigned int size, int print)
     }
 }
 
-// ** You will work on merge sort during the lab on Module 06 ** //
 
+// ** You will work on merge sort during the lab on Module 06 ** //
 // Merges two subarrays of arr[].
 // First subarray is arr[l..m]
 // Second subarray is arr[m+1..r]
@@ -142,13 +142,51 @@ void merge(int arr[], int temp[], int l, int m, int r)
     {
         exit(1);
     }
-
     if (l > m || m + 1 > r)
         return;
 
+    // Copy data to temp array
+    for (int i = l; i <= r; i++)
+    {
+        temp[i] = arr[i];
+    }
 
+    int i = l;       // Initial index of first subarray
+    int j = m + 1;   // Initial index of second subarray
+    int k = l;       // Initial index of merged subarray
+
+    // Merge the temp arrays back into arr[l..r]
+    while (i <= m && j <= r)
+    {
+        if (temp[i] <= temp[j])
+        {
+            arr[k] = temp[i];
+            i++;
+        }
+        else
+        {
+            arr[k] = temp[j];
+            j++;
+        }
+        k++;
+    }
+
+    // Copy remaining elements of left subarray, if any
+    while (i <= m)
+    {
+        arr[k] = temp[i];
+        i++;
+        k++;
+    }
+
+    // Copy remaining elements of right subarray, if any
+    while (j <= r)
+    {
+        arr[k] = temp[j];
+        j++;
+        k++;
+    }
 }
-
 
 // To be built during week 6 lab
 // Name: mergeSort
@@ -161,11 +199,9 @@ void merge(int arr[], int temp[], int l, int m, int r)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void merge_sort(int arr[], int temp[], int l, int r)
 {
-    int m;
-    
     if (l < r)
     {
-        m = l + (r - l) / 2; // Find the middle point
+        int m = l + (r - l) / 2; // Find the middle point
         
         merge_sort(arr, temp, l, m);     // Sort first half
         merge_sort(arr, temp, m + 1, r); // Sort second half
@@ -174,7 +210,6 @@ void merge_sort(int arr[], int temp[], int l, int r)
 }
 
 // lab build, merge sort
-
 void mergeSortIntegers(int *array, unsigned int size, int print)
 { // print is ignored for this one
     if (array == NULL)
@@ -183,7 +218,6 @@ void mergeSortIntegers(int *array, unsigned int size, int print)
     }
     if (size <= 1)
         return;
-
     int *temp = (int *)malloc(sizeof(int) * size);
     merge_sort(array, temp, 0, size - 1);
     free(temp);
