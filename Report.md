@@ -137,7 +137,7 @@ You are planning a heist to steal a rare coin that weighs 1.0001 ounces. The pro
 
 #### 7.1 Algorithm
 Describe an algorithm that will help you find the coin. We encourage you to use pseudo-code, but not required.
-> We can use divide and conquer. First lets divide i.e., Split the n number of coins into A, B and C. Then conquer i.e., determine which of the 3 pile has the rare coin (via weighing). A against B of they balance the heavy coin is in C, if not, its in the heavier of the A or B. Discard the other two piles and repeat the sameway split on the suspect pile until a single coin remains. This is effectively a ternary search, requiring about \log_3 n weighings (approx. 5 for 250)
+> We can use divide and conquer. First lets divide i.e., Split the n number of coins into A, B and C. Then conquer i.e., determine which of the 3 pile has the rare coin (via weighing). A against B of they balance the heavy coin is in C, if not, its in the heavier of the A or B. Discard the other two piles and repeat the sameway split on the suspect pile until a single coin remains. This is effectively a ternary search, requiring about $\\log_{3} n$ weighings (approx. 5 for 250)
 
 #### 7.2 Time Complexity
 What is the average time complexity of your algorithm? 
