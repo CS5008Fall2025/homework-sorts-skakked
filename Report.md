@@ -141,7 +141,11 @@ Describe an algorithm that will help you find the coin. We encourage you to use 
 
 #### 7.2 Time Complexity
 What is the average time complexity of your algorithm? 
-
+> Each weighing discards roughly $ \tfrac{2}{3} $ of the coins, so the number of weighings grows like:
+> Average / expected: $ \Theta(\log_{3} n) $ (about $ \log_{3} n $ weighings)
+> Worst case: $ \lceil \log_{3} n \rceil $ weighings due to uneven splits
+> For $ n = 250 $: $ \log_{3} 250 \approx 5.03 $ which is about 5 on average and worst case would be $ \le 6 $ weighings
+> Average time complexity  would be $ \Theta(\log_{3} n) $
 
 ## Technical Interview Practice Questions
 
