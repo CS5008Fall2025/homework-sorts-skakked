@@ -43,6 +43,7 @@ int findMinimum(int *array, int start, int stop)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void selectionSortIntegers(int *array, unsigned int size, int print)
 {
+    if (size <= 1) return; // already sorted
     for (unsigned int i = 0; i < size - 1; i++) // for each position in the array
     {
         int minIndex = findMinimum(array, i, size); // find the index of the minimum value
@@ -109,6 +110,7 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
 //           be modified to store a sorted array of size.
 void bubbleSortIntegers(int *array, unsigned int size, int print)
 {
+    if (size <= 1) return; // already sorted
     for (unsigned int i = 0; i < size - 1; i++) // for each position in the array
     {
         int swapped = 0; // flag to check if any swapping occurred
