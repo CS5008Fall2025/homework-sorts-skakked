@@ -94,7 +94,7 @@ Provide example of arrays that generate _best_ case for Bubble, Selection, Inser
 #### 3.4 Memory Considerations
 Order the various sorts based on which take up the most memory when sorting to the least memory. You may have to research this, and include the mathematical notation. 
 
-> Memory Usage Ranking (Most to Least): Merge Sort O(n), Quick Sort o(log n), Bubble Sort O(1) > Selection Sort O(1) > Insertion sort O(1)
+> Memory Usage Ranking (Most to Least): Merge Sort O(n), Quick Sort o(log n), Bubble Sort O(1), Selection Sort O(1), Insertion sort O(1)
 
 
 ### 4. Growth of Functions
@@ -111,12 +111,14 @@ $2^n$
 $100n$  
 $2^{(n-1)}$
 #### Categories
-* 
-*
-*
-*
-*
-*
+
+* O(1) - Constant: $100$, $10000$
+* O(n) - Linear: $3n$, $100n$
+* O(n log n) - Linearithmic: $n\log_2n$
+* O(n²) - Quadratic: $n^2$, $5n^2+5n$
+* O(2^n) - Exponential: $2^n$, $2^{(n-1)}$
+* O(n!) - Factorial: $n!$
+
 
 ### 5. Growth of Function Language
 
