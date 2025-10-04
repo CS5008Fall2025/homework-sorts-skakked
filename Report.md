@@ -174,6 +174,7 @@ Sorting algorithms are still being studied today. They often include a statistic
 #### Big O
 Give the worst and best case time-complexity, and examples that would generate them. 
 > Best Case: Best-case time complexity is O(n), which occurs when the input array is already sorted. E.g. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 > Worst Case: The worst-case time complexity is O(n log n). E.g. Random data with no eixsting order, a random array of integers 1 to 100.
 
 <hr>
