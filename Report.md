@@ -153,6 +153,10 @@ For both these questions, are you are free to use what you did as the last secti
 
 1. Select one technical interview question (this module or previous) from the [technical interview list](https://github.com/CS5008-khoury/Resources/blob/main/TechInterviewQuestions.md) below and answer it in a few sentences. You can use any resource you like to answer the question.
 
+> When would we want an algorithm with a higher time complexity than another faster algorithm?
+> Answer: When you have nearly sorted data because insertion Sort is O(n²) worst case but O(n) for nearly sorted data. On partially sorted arrays, it can beat Quick Sort or Merge Sort despite worse theoretical complexity. A second reason a programmer might chose an algorithm with a higher time complexity is when you have a small dataset like for small n (n < 50), simpler O(n²) algorithms like insertion sort can outperform O(n log n) algorithms due to fewer operations.
+
+
 2. Select one coding question (this module or previous) from the [coding practice repository](https://github.com/CS5008-khoury/Resources/blob/main/LeetCodePractice.md) and include a c file with that code with your submission. Make sure to add comments on what you learned, and if you compared your solution with others. 
  
 
