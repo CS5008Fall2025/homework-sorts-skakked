@@ -165,11 +165,16 @@ For both these questions, are you are free to use what you did as the last secti
 ## Deeper Thinking
 Sorting algorithms are still being studied today. They often include a statistical analysis of data before sorting. This next question will require some research, as it isn't included in class content. When you call `sort()` or `sorted()` in Python 3.6+, what sort is it using? 
 
+> Python 3.6 through 3.10 uses Timsort, a hybrid sorting algorithm that combines insertion sort and merge sort. Starting with Python 3.11, Python switched to Powersort.  
+
 #### Visualize
-Find a graphic / visualization (can be a youtube video) that demonstrates the sort in action. 
+> Find a graphic / visualization (can be a youtube video) that demonstrates the sort in action.
+> Timsort Visualization: https://www.chrislaux.com/timsort
 
 #### Big O
 Give the worst and best case time-complexity, and examples that would generate them. 
+> Best Case: Best-case time complexity is O(n), which occurs when the input array is already sorted. E.g. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+> Worst Case: The worst-case time complexity is O(n log n). E.g. Random data with no eixsting order, a random array of integers 1 to 100.
 
 <hr>
 
