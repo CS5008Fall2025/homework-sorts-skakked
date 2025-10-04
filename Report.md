@@ -37,6 +37,8 @@ Include the image in your markdown. As a reminder, you save the image in your re
 ### 2. Analysis
 Looking at the graph and the table, what can you say about the various sorts? Which are the fastest? Which are the slowest? Which are the most consistent? Which are the least consistent? Use this space to reflect in your own words your observations.
 
+> Quick Sort and Merge Sort are the fastest algorithms, with Quick achieving ≈0.011s and Merge ≈0.013s at N=100,000, while Bubble Sort is the slowest at ≈14.43s wjich is approximately a 1,300x performance difference. Among O(n²) algorithms, Insertion Sort consistently outperforms Selection Sort (3.70s vs. 4.47s at N=100,000). Merge Sort is the most consistent algorithm, showing predictable O(n log n) behavior regardless of input ordering, while Bubble Sort exhibits the highest variance because nearly-sorted arrays benefit from early-exit optimization but reverse-sorted arrays lead to maximum comparisons.
+
 
 ### 3. Big O
 Build another table that presents the best, worst, and average case for Bubble, Selection, Insertion, Merge, and Quick. You are free to use resources for this, but please reference them if you do. 
