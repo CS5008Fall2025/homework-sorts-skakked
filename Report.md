@@ -29,7 +29,7 @@ Build a line chart using your favorite program. Your X axis will be N increasing
 
 Include the image in your markdown. As a reminder, you save the image in your repo, and use [image markdown].
 
-![Runtime Growth of Quadratic Sorting Algorithms - Bubble, Selection, Insertion](https://github.com/CS5008Fall2025/homework-sorts-skakked/blob/main/Files/QudraticSorts.jpeg)
+![Runtime Growth of Quadratic Sorting Algorithms - Bubble, Selection, Insertion](https://github.com/CS5008Fall2025/homework-sorts-skakked/blob/main/Files/QudraticSorts.png)
 
 ![Runtime Growth of Logarithmic Sorting Algorithms - Merge and Quick](https://github.com/CS5008Fall2025/homework-sorts-skakked/blob/main/Files/LogarithmicSorts.png)
 
