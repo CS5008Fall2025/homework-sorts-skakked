@@ -41,7 +41,15 @@ Looking at the graph and the table, what can you say about the various sorts? Wh
 
 
 ### 3. Big O
-Build another table that presents the best, worst, and average case for Bubble, Selection, Insertion, Merge, and Quick. You are free to use resources for this, but please reference them if you do. 
+Build another table that presents the best, worst, and average case for Bubble, Selection, Insertion, Merge, and Quick. You are free to use resources for this, but please reference them if you do.
+
+| Algorithm | Best Case | Average Case | Worst Case |
+|-----------|-----------|--------------|------------|
+| Bubble Sort | O(n) | O(n²) | O(n²) |
+| Selection Sort | O(n²) | O(n²) | O(n²) |
+| Insertion Sort | O(n) | O(n²) | O(n²) |
+| Merge Sort | O(n log n) | O(n log n) | O(n log n) |
+| Quick Sort | O(n log n) | O(n log n) | O(n²) |
 
 
 #### 3.2 Worst Case
