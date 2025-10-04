@@ -122,10 +122,13 @@ Pair the following terms with the correct function in the table.
 
 ### 6. Stable vs Unstable
 Look up stability as it refers to sorting. In your own words, describe one sort that is stable and one sort that isn't stable  
-
+> A stable sorting algorithm is a sorting method that preserves the relative order of elements that are considered equal according to the sorting criteria
+> Merge sort is stable because the relative order is maintained because it always sorts from the left subarray first preserving order. Quick sort is unstable because it doesn't preserve the original order because swaps elements around without tracking its order.
 
 ### 6.2 When stability is needed?
 Explain in your own words a case in which you will want a stable algorithm over an unstable. Include an example. 
+> We need stability in cases where we are sorting by multiple criteria or when equal elements have additional information that shouldn't be lost. For example sorting for a shopping site, sorting products by category and then by price within each category.
+
 
 ### 7. Gold Thief
 
